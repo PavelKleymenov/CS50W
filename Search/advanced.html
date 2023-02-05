@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <!--Make the homepage responsive-->
+            <meta name="viewport" content="initial-scale=1, width=device-width">
+            
+            <!--Specify the character encoding for the HTML document-->
+            <meta charset="UTF-8" />
+            <title>Advanced Search</title>
+    
+            <style>
+            
+                /* Space out the elements within the navbar */
+                nav div {
+                    padding: 6px;
+                    margin: 4px;
+                    margin-top: 10px;
+
+                }
+
+                /* Align the link to the images page with pictures on the right of it */
+                .navbar-right a {
+                    margin-top: 20px;
+                }
+
+                /* Underscore the link to images*/
+                .navbar-right a:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                /* Make the images within the navbar assume coloring around them, when hovered upon */
+                .nav-img:hover {
+                    background-color: #515151;
+                    border-radius: 50%;
+                }
+
+                /* Style the links within the navbar */
+                a {
+                    text-decoration: none;
+                    color: white;
+                    height: 24px;
+                    width: 74px;
+                }
+
+                /* Style the Advanced Search Inscription as in the Google Advanced page itself */
+                .appbar {
+                    color: #f28b82;
+                    font-size: 20px;
+                    margin-top: 25px;
+                    border-bottom:1px solid #3c4043;
+                    padding-bottom: 30px;
+
+                }
+
+                /* Style the section that contains input bars to complete the searching */
+                .advanced {
+                    margin: 40px 2% 0 45px;
+                    display: block;
+                    font-size:16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    max-width: 1140px;
+                    min-width: 200px;
+                    width: 96%;
+                }
+
+
+                /* Make sure criteria are moved below floating elements that precede it */
+                div.otByu div.yIQOUb {
+                        clear: both;
+                    }
+
+                /* Style the command descriptions on the upper left of each section */
+                div.otByu div.I1Kbt, div.lFApYd {
+                    float: left;
+                    color: #e8eaed;
+                    min-width: 167px;
+                    width: 16%;
+                    font-size: 13px;
+                    min-height: 42px;
+                    font-weight: 300;
+                    vertical-align: middle;
+                }
+
+                /* Determine the layout as well as the margin between each of the input bars */
+                .lOTAE {
+                    height: 30px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                /* Make sure that the header command above the subcommands to the right of the input bar
+                has the same outlook as its leftmost counterpart and also place it a few pixels shy of the end of the input fields */
+                div.otByu div.HoCfzc {
+                    float: left;
+                    min-width: 167px;
+                    min-height: 41px;
+                    vertical-align: middle;
+                    width: 50%;
+                }
+
+                /* Make sure the subdiv that precedes the one containing the rightmost header command doesn't botch the aforeapplied styling */
+                div.otByu div.orcpGe {
+                    float: right;
+                    width: 33%;
+                    font-size: 13px;
+                    font-weight: 700;
+                    padding-left: 5px;
+                    vertical-align: middle;
+                }
+
+                /* Yet another styling that ensures the space between all the alements within the section */
+                div.otByu div.FAcADc {
+                    float: left;
+                    min-width: 167px;
+                    width: 16%;
+                    height: 42px;
+                    color: #222;
+                    font-size: 13px;
+                    line-height: 16px;
+                    vertical-align: middle;
+                }
+
+                /* Give the coloring to the subcommands under the leftmost header commands */
+                div.otByu div.FAcADc, div.lFApYd, .jfk-radiobutton-label {
+                    color: #bdc1c6;
+                }
+
+                /* Style the input */
+                label {
+                    cursor: default;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-weight: inherit;
+                    font-style: inherit;
+                    font-size: 100%;
+                    vertical-align: baseline;
+                    text-decoration: none;
+                }
+
+                /* Make sure the content of the main section does not float all the way to the left */
+                div.otByu div.jYcx0e {
+                    float: left;
+                    min-width: 167px;
+                    min-height: 41px;
+                    vertical-align: middle;
+                    width: 50%;
+                }
+
+                /* Space out the subcommands that are on the right of the input bar with the input field */
+                div.PLLUQc {
+                    padding-right: 16px;
+                }
+
+                /* Make sure the input bar has the desired width and the cursor appears on the very left of the input field */
+                div.otByu div.jYcx0e input[type="text"], div.otByu div.jYcx0e span.PnexQd {
+                        width: 100%;
+                        text-align: left;
+                    }
+
+                /* Make sure the input field has a prototypical outlook */
+                .jfk-textinput {
+                    -webkit-border-radius: 1px;
+                    -moz-border-radius: 1px;
+                    border-radius: 1px;
+                    border: 1px solid #d9d9d9;
+                    font-size: 13px;
+                    height: 25px;
+                    padding: 1px 8px;
+                }
+
+                /* Style the subcommand that are to the right of the input field */
+                div.otByu div.cwqNnb {
+                    float: left;
+                    width: 32%;
+                    min-width: 160px;
+                    margin: 0 0 8px 1%;
+                    color: #555;
+                    font-size: 11px;
+                    padding-left: 5px;
+                    vertical-align: middle;
+                    position: relative;
+                }
+
+                /* Make sure the inside of the input field merge into the outlook of the page itself */
+                input.jfk-textinput, .gGbPid {
+                    background: #202124;
+                    border: 1px solid #5f6368;
+                    color: #bdc1c6;
+                }
+
+                /* Line up the input fields below the separation line */
+                .gGbPid {
+                    width: 98%;
+                    margin: 0;
+                    padding: 0;
+                    text-align: left;
+                    text-indent: 4px;
+                }
+
+                /* Style the caret looking dropdown mark */
+                .goog-flat-menu-button-dropdown {
+                    border-color: #777 transparent;
+                    border-style: solid;
+                    border-width: 4px 4px 0;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    right: 5px;
+                    top: 12px;
+                }
+
+                /* Space out the dropdown button */
+                .goog-select {
+                    padding: 5px;
+                }
+
+                /* Place the submit button right underneath the rightmost corner of the last input bar */
+                div.otByu div.yIQOUb input.dUBGpe {
+                    float: right;
+                    margin: 10px 0;
+
+                }
+
+                /* Style the inside of the submit button */
+                input.dUBGpe {
+                    padding: 0 12px;
+                    font-size: 13px;
+                }
+
+                /* Give a little bit more styling to the button itself */
+                .jfk-button {
+                    border-radius: 2px;
+                    cursor: default;
+                    font-size: 13px;
+                    font-weight: bold;
+                    text-align: center;
+                    white-space: nowrap;
+                    outline: 0;
+                    background: #8ab4f8;
+                    color: #202124
+                }
+
+                /* Make the button assume the border around it when hovered over */
+                .jfk-button-action:hover {
+                    border: 1px solid #2f5bb7;
+                }
+
+                /* Space out the links within the footer */
+                footer div .links div {
+                    padding: 10px;
+                    margin-left: 10px;
+                }
+
+                /* Set the coloring for the material inside the footer */
+                footer {
+                    color: #999da2;
+                    width: 100%;
+                }
+
+                /* Make the links within the footer underlined when those are hovered over */
+                footer div .links div:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+            </style>
+        </head>
+
+    <!-- Set the general outlook of the page-->
+        <body style="
+            background-color: #202124;
+            height: 100vh;
+            max-height: 100vh;
+            color: white;
+            font-family: arial, sans-serif;
+            margin: 0;
+        "
+    >
+        <!--Header section-->
+        <header>
+
+            <!--Create a navbar with the style intrinsic to Google Images page-->
+            <nav style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                 "
+        >
+            <!--Add a section with the left-aligned elements of the header-->
+            <div class="navbar-left" style="
+                color: white;
+                font-size: 25px;
+                font-family: Roboto, sans-serif;
+                opacity: 0,87;
+            ">
+
+            <!--Add logo-link that redirects users to Google Homepage-->
+            <a href="index.html"
+
+
+            style="
+                height: 24px;
+                width: 74px;
+                font-size: 100%;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 6px;
+                margin: 10px;
+                margin-top: 10px;
+                color: rgba(255,255,255,0.87);
+        ">Google</a>
+    </div>
+
+        <!--Add a section with the left-aligned elements of the header-->
+        <div class="navbar-right" style="display: flex">
+
+            <a href="images.html">Images</a>
+            
+            <!--Add an app icon-->
+            <div class="nav-img" style="width: 24px; height:24px">
+                <svg
+                    style="width: 24px; height:24px; "
+                    class="gb_0e"
+                    focusable="false"
+                    viewBox="0 0 24 24">
+                <path
+                    fill="#ffffff"
+                    d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                </path>
+                </svg>
+            </div>
+
+            <!--Add a profile image-->
+            <div class="nav-img" style="width: 32px; height: 32px">
+                <img
+                    style="width: 32px; height: 32px; border-radius: 15px;"
+                    src="profile.png"
+                    alt=""
+                >
+            </div>
+        </div>
+    </nav>
+
+    <!--Add the 'Advanced Search inscription-->
+    <div class="appbar">
+        <label style="margin-left:60px;">Advanced Search</label>
+    </div>
+
+</header>
+
+    <!--Search section-->
+    <div class="advanced">
+
+        <!--Add a form thar allows users to find various pages by specifing the search criteria-->
+        <form action="https://www.google.com/search" method="GET" name="q">
+
+
+            <!--Add a div that holds the left inscription within it-->
+            <div class="otByu">
+                <div class="yIQOUb">
+         
+                    <!--Add the actual inscription-->
+                    <div class="I1Kbt">
+                        <div class="lOTAE"><span>Find pages with...</span></div>
+                    </div>
+         
+                    <!--Add a space between the left and right inscriptions by dint of HTML entity-->
+                    <div class="HoCfzc">&nbsp; </div>
+                    
+                    <!--Add command header to the right of the HTML entity-->
+                    <div class="orcpGe">
+                        <div class="lOTAE">To do this in the search box. </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Start adding criteria to the left of the input fields-->
+            <div class="otByu">
+                
+                <!--There goes the first criterion-->
+                <div class="yIQOUb">
+                    <div class="FAcADc">
+                        <div class="lOTAE"> <label for="xX4UFf">all these words:</label></div>
+                    </div>
+                
+                <!--And subsequently the input field for it-->
+                <div class="jYcx0e">
+                    <div class="PLLUQc"> <input class="jfk-textinput" value="" autofocus="autofocus" name="q" type="text"></div>
+                </div>
+                 
+                    <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb dulCv">
+                        <div class="lOTAE">Type the important words:<span class="BFlQMb">tri-colour rat terrier</span></div>
+                    </div>
+
+                <!--There goes the second criterion-->
+                <div class="yIQOUb">
+                        <div class="FAcADc">
+                            <div class="lOTAE"> <label for="xX4UFf">this exact word or phrase:</label></div>
+                        </div>
+
+                <!--And subsequently the input field for it-->
+                <div class="jYcx0e">
+                    <div class="PLLUQc"> <input class="jfk-textinput" value="" autofocus="autofocus" name="q" type="text"></div>
+                </div>
+
+                <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb dulCv">
+                        <div class="lOTAE">Put exact words in quotes:<span class="BFlQMb">"rat terrier"</span></div>
+                    </div>
+
+                <!--There goes the third criterion-->
+                <div class="yIQOUb">
+                        <div class="FAcADc">
+                            <div class="lOTAE"> <label for="xX4UFf">any of these words:</label></div>
+                        </div>
+
+                <!--And subsequently the input field for it-->
+                <div class="jYcx0e">
+                    <div class="PLLUQc"> <input class="jfk-textinput" value="" autofocus="autofocus" name="q" type="text"></div>
+                </div>
+
+                        <!--Add clarifying comments to the right of the input field-->
+                        <div class="cwqNnb dulCv">
+                            <div class="lOTAE">Type OR between all the words you want:<span class="BFlQMb">miniature OR standard</span></div>
+                        </div>
+
+                <!--There goes the fourth criterion-->
+                <div class="yIQOUb">
+                        <div class="FAcADc">
+                            <div class="lOTAE"><label for="xX4UFf">none of these words:</label></div>
+                        </div>
+
+                <!--And subsequently the input field for it-->
+                <div class="jYcx0e">
+                    <div class="PLLUQc"> <input class="jfk-textinput" value="" autofocus="autofocus" name="q" type="text"></div>
+                </div>
+
+                    <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb dulCv">
+                            <div class="lOTAE">Put a minus sign just before words that you don't want:<span class="BFlQMb"><br>-rodent, -"Jack Russell"</span></div>
+                    </div>
+
+                <!--And then there's the fifth criterion-->
+                <div class="yIQOUb">
+                        <div class="FAcADc">
+                            <div class="lOTAE"><label for="LK5akc">numbers ranging from:</label></div>
+                        </div>
+
+                <!--And subsequently the input field for it-->
+                <div class="jYcx0e" style="position:relative">
+                    <div style="display:table; width:100%">
+                        <div style="display:table-cell; padding-right:16px">
+                         
+                            <!--Add the first input field-->
+                            <input class="jfk-textinput" id="LK5akc" name="q" type="text">
+                        </div>
+
+                        <!--Set out styling the separatory word-->
+                        <div style="
+                            display:table-cell;
+                            width:40px;
+                            padding-right:6px;
+                            padding-left:6px;
+                            text-align:center;
+                            font-size:13px;
+                            color:#bdc1c6">to</div>
+
+                            <!--Embellish the second input field-->
+                                <div style="
+                                    display:table-cell;
+                                    padding-right:16px">
+                                        <input class="jfk-textinput" name="q" type="text">
+                                </div>
+                    </div>
+                </div>
+
+                    <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb dulCv">
+                        <div class="lOTAE">Put two full stops between the numbers and add a unit of measurement:<span class="BFlQMb">10..35 kg, £300..£500, 2010..2011</span></div></div>
+                    </div>
+                    
+                    <!--Add a section that spaces out the separation line and the content above it-->
+                    <div class="yIQOUb"></div>
+                </div>
+                
+                <!--Add the separation line-->
+                <div class="Qy8Xkb" style="
+                    margin: 18px 0;
+                    clear: both;
+                    border-top: 1px solid #ebebeb;
+                    border-color: #3c4043;"></div>
+
+        <!--Begin delineating the content below the separation line -->
+        <div class="otByu">
+            <div class="yIQOUb">
+                <div class="I1Kbt">
+
+                    <!--First thing being in this section is the invitation to add even more precision to the criteria set previosly-->
+                    <div class="lOTAE"><span>Then narrow your results by...</span></div>
+                </div>
+            </div>
+        </div>
+
+            <!--There goes the language-->
+            <div class="yIQOUb">
+                <div class="FAcADc">
+                    <div class="lOTAE">
+                        <label for="lr_input">language:</label></div>
+                    </div>
+                <div class="jYcx0e">
+                    <div style="
+                        position:relative;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-weight: inherit;
+                        font-style: inherit;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        text-decoration: none;">
+                        
+                        <input id="lr_input" name="q" value="" type="hidden">
+                        
+                            <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                                <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">any language</div>
+                                <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb">
+                        <div class="lOTAE">Find pages in the language that you select.</div>
+                    </div>
+                </div>
+            
+                <!--There goes the region-->
+                <div class="yIQOUb">
+                    <div class="FAcADc">
+                        <div class="lOTAE">
+                            <label for="lr_input">region:</label></div>
+                        </div>
+                
+                    <div class="jYcx0e">
+                        <div style="
+                            position:relative;
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            font-weight: inherit;
+                            font-style: inherit;
+                            font-size: 100%;
+                            vertical-align: baseline;
+                            text-decoration: none;">
+                      
+                        <input id="lr_input" name="q" value="" type="hidden">
+                            <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                                <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">any region</div>
+                                <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!--Add clarifying comments to the right of the input field-->
+                        <div class="cwqNnb">
+                            <div class="lOTAE">Find pages published in a particular region.</div>
+                        </div>
+                    </div>
+
+            <!--There goes the last update-->
+            <div class="yIQOUb">
+                <div class="FAcADc">
+                    <div class="lOTAE">
+                        <label for="lr_input">last update:</label></div>
+                    </div>
+
+                <div class="jYcx0e">
+                    <div style="
+                        position:relative;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-weight: inherit;
+                        font-style: inherit;
+                        font-size: 100%;
+                        vertical-align: baseline;
+                        text-decoration: none;">
+                    
+                        <input id="lr_input" name="q" value="" type="hidden">
+                        
+                            <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                                <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">anytime</div>
+                                <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Add clarifying comments to the right of the input field-->
+                    <div class="cwqNnb">
+                        <div class="lOTAE">Find pages updated within the time that you specify.</div>
+                    </div>
+                </div>
+
+            <!--There's your site or domain-->
+            <div class="yIQOUb">
+                <div class="FAcADc">
+                    <div class="lOTAE">
+                        <label for="NqEkZd">site or domain:</label>
+                    </div>
+                </div>
+
+                <div class="jYcx0e">
+                    <div class="PLLUQc">
+                        <input class="jfk-textinput" value="" id="NqEkZd" name="as_sitesearch" type="text">
+                    </div>
+                </div>
+
+                <!--Add clarifying comments to the right of the input field-->
+                <div class="cwqNnb">
+                    <div class="lOTAE">Search one site (like  <span class="BFlQMb">wikipedia.org</span>    ) or limit your results to a domain like <span class="BFlQMb">.edu</span>, <span class="BFlQMb">.org</span> or <span class="BFlQMb">.gov</span></div>
+                </div>
+            </div>
+
+        <!--There goes the region-->
+        <div class="yIQOUb">
+            <div class="FAcADc">
+                <div class="lOTAE">
+                    <label for="lr_input">region:</label></div>
+                </div>
+
+            <div class="jYcx0e">
+                
+                <div style="
+                    position:relative;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-weight: inherit;
+                    font-style: inherit;
+                    font-size: 100%;
+                    vertical-align: baseline;
+                    text-decoration: none;">
+                    
+                    <input id="lr_input" name="q" value="" type="hidden">
+                    
+                        <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                            <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">any region</div>
+                            <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Add clarifying comments to the right of the input field-->
+                <div class="cwqNnb">
+                    <div class="lOTAE">Find pages published in a particular region.</div>
+                </div>
+            </div>
+
+    <!--There go the terms-->
+    <div class="yIQOUb">
+        <div class="FAcADc">
+            <div class="lOTAE">
+                <label for="lr_input">terms appearing:</label></div>
+            </div>
+        
+        <div class="jYcx0e">
+            <div style="
+                position:relative;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+                text-decoration: none;">
+         
+                <input id="lr_input" name="q" value="" type="hidden">
+                
+                    <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                        <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">anywhere in the page</div>
+                        <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Add clarifying comments to the right of the input field-->
+            <div class="cwqNnb">
+                <div class="lOTAE">Search for terms in the whole page, page title or web address, or links to the page you're looking for.</div>
+            </div>
+        </div>
+
+        <!--The safe search-->
+        <div class="yIQOUb">
+            <div class="FAcADc">
+                <div class="lOTAE"><a href="https://support.google.com/websearch?p=adv_safesearch&amp;hl=en">SafeSearch</a>:</div>
+            </div>
+            <div class="jYcx0e">
+                <div>
+                    <div style="position:relative"><input value="images" id="as_safesearch_input" name="safe" type="hidden"><div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="as_safesearch_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":8v">
+                        <div class="goog-inline-block goog-flat-menu-button-caption" id=":8v" role="option" aria-selected="true" aria-setsize="2" aria-posinset="1">Show explicit results</div>
+                        <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="cwqNnb">
+                <div class="lOTAE">Tell <a href="https://support.google.com/websearch?p=adv_safesearch&amp;hl=en">SafeSearch</a> whether to filter sexually explicit content.</div>
+            </div>
+        </div>
+
+    <!--There go the formats-->
+    <div class="yIQOUb">
+        <div class="FAcADc">
+            <div class="lOTAE">
+                <label for="lr_input">terms appearing:</label></div>
+            </div>
+        <div class="jYcx0e">
+            <div style="
+                position:relative;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+                text-decoration: none;">
+                
+                <input id="lr_input" name="q" value="" type="hidden">
+                
+                    <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="lr_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":1b">
+                        <div class="goog-inline-block goog-flat-menu-button-caption" id=":1b" role="option" aria-selected="true" aria-setsize="47" aria-posinset="1">any format</div>
+                        <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Add clarifying comments to the right of the input field-->
+            <div class="cwqNnb">
+                <div class="lOTAE">Find pages in the format that you prefer.</div>
+            </div>
+        </div>
+
+        <!--The usage rights-->
+        <div class="yIQOUb">
+            <div class="FAcADc">
+                <div class="lOTAE"><a href="https://support.google.com/websearch?p=ws_images_usagerights&amp;hl=en">usage rights</a>:</div>
+            </div>
+
+            <div class="jYcx0e">
+                <div style="position:relative"><input value="" id="as_rights_input" data-name="sur" data-tbs="true" type="hidden">
+                    <div class="goog-select gGbPid goog-inline-block goog-flat-menu-button" id="as_rights_button" role="listbox" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;" aria-activedescendant=":8g">
+                        <div class="goog-inline-block goog-flat-menu-button-caption" id=":8g" role="option" aria-selected="true" aria-setsize="5" aria-posinset="1">not filtered by licence</div>
+                        <div class="goog-inline-block goog-flat-menu-button-dropdown" aria-hidden="true">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cwqNnb">
+                <div class="lOTAE">Find pages that you are free to use yourself.</div>
+            </div>
+        </div>
+
+        <div class="yIQOUb">
+            <div class="FAcADc"></div>
+            <div class="jYcx0e" style="text-align:right"><input id="CIGjud" name="tbs" type="hidden" value="">
+        
+                <input class="jfk-button jfk-button-action dUBGpe"
+                    style="
+                    -webkit-user-select:none;
+                    user-select:none;
+                    line-height:100%;
+                    height:30px;
+                    min-width:120px"
+                    value="Advanced Search" type="submit"></div>
+                    
+                <div class="cwqNnb"></div>
+        </div>
+
+         <!--Add a section that spaces out the separation line and the content above it-->
+         <div class="yIQOUb"></div>
+
+                <!--Add the separation line-->
+                <div class="Qy8Xkb" style="
+                    margin: 18px 0;
+                    clear: both;
+                    border-top: 1px solid #ebebeb;
+                    border-color: #3c4043;"></div>
+        </form>
+
+        <!--Add auxillary section that enhances the advanced search feature even further-->
+        <div style="
+            clear:both;
+            font-size:13px;
+            line-height:18px;
+            margin-bottom:90px">
+
+                <!--There goes the section-->
+                <div class="lFApYd">
+                    <div class="lOTAE"><span>You can also...</span></div>
+                </div>
+               
+                <div style="clear:both">
+                    <a href="https://support.google.com/websearch?p=adv_pages_similar&amp;hl=en">Find pages that are similar to a URL</a>
+                </div>
+               
+                <div>
+                    <a href="https://support.google.com/websearch?p=adv_pages_visited&amp;hl=en">Search pages that you've visited</a>
+                </div>
+               
+                <div>
+                    <a href="https://support.google.com/websearch?p=adv_operators&amp;hl=en">Use operators in the search box</a>
+                </div>
+               
+                <div>
+                    <a href="/preferences?hl=en-RU">Customise your search settings</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create a footer with all the auxillary information-->
+        <footer style="
+            background-color: #171717;
+            position: absolute;
+            right:0;
+            left: 0;
+            width: 100%
+            ">
+
+            <div style="
+                padding: 20px;
+                border-bottom:1px solid #3c4043;
+                font-size:15px
+                ">Russia
+            </div>
+
+            <div style="
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center"
+            >
+
+                <!--Add a section where the terms of use are provided-->
+                <div style="display: flex" class="links">
+                    <div>Help</div>
+                    <div>Privacy</div>
+                    <div>Terms</div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
